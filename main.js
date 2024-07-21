@@ -135,47 +135,47 @@
 //  objeto representa a 1 persona con al menos 4 propiedades, realizar un programa
 //  que muestre un mensaje de presentacion por cada elemento del array.
 
-let familia = [
-    {
-        nombre: "Alexania",
-        edad: 38, 
-        altura: 1.67, 
-        oficio: "Repostera"
-    }, 
-    {
-        nombre: "Alexandre", 
-        edad: 31,  
-        altura: 1.78, 
-        oficio: "Enfermero"
-    },
-    {
-        nombre: "Alexandra",   
-        edad: 34,     
-        altura: 1.75,  
-        oficio: "Pastelera"
-    },
-    {
-        nombre: "Alexia", 
-        edad: 28,     
-        altura: 1.72,  
-        oficio: "Bailarina"
-    },
-     {
-        nombre: "Alexane", 
-        edad: 33,     
-        altura: 1.68,  
-        oficio: "Gerente"
-    }
-] 
+// let familia = [
+//     {
+//         nombre: "Miriam",
+//         edad: 60, 
+//         altura: 1.51, 
+//         oficio: "Abogada"
+//     }, 
+//     {
+//         nombre: "Humberto", 
+//         edad: 65,  
+//         altura: 1.65, 
+//         oficio: "Locutor"
+//     },
+//     {
+//         nombre: "Mariany",   
+//         edad: 38,     
+//         altura: 1.66,  
+//         oficio: "Docente"
+//     },
+//     {
+//         nombre: "Carlos", 
+//         edad: 39,     
+//         altura: 1.80,  
+//         oficio: "Ingeniero"
+//     },
+//      {
+//         nombre: "Manuel", 
+//         edad: 29,     
+//         altura: 1.76,  
+//         oficio: "rappi"
+//     }
+// ] 
 
-function presentacion() {
-    for (let i = 0; i < familia.length; i++) {
-        let persona = familia[i];
-        console.log("Hola, mi nombre es " + persona.nombre + ", tengo " + persona.edad + " años, mido " + persona.altura + " y mi profesión es " + persona.oficio + ".");
-    }
-}
+// function presentacion() {
+//     for (let i = 0; i < familia.length; i++) {
+//         let persona = familia[i];
+//         console.log("Hola, mi nombre es " + persona.nombre + ", tengo " + persona.edad + " años, mido " + persona.altura + " y mi oficio es " + persona.oficio + ".");
+//     }
+// }
 
-presentacion();
+// presentacion();
 
 
 
@@ -183,7 +183,13 @@ presentacion();
 //  muestre los numeros impares.
 
 
+// let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// for (let i = 0; i < numeros.length; i++) {
+//     if (numeros[i] % 2 !== 0) {
+//         console.log(numeros[i]);
+//     }
+// }
 
 
 
@@ -191,20 +197,149 @@ presentacion();
 //  numeros pares por un lado y los impares por otro, el ingreso de dato finaliza cuando
 //  el usuario ingresa un 0.
 
+// let sumaPares = 0;
+// let sumaImpares = 0;
+// let numero;
+
+// do {
+//     numero = parseInt(prompt("Ingresa un número o 0 para terminar"));
+    
+//     if (numero !== 0) {
+//         if (numero % 2 === 0) {
+//             sumaPares += numero;
+//         } else {
+//             sumaImpares += numero;
+//         }
+//     }
+// } while (numero !== 0);
+
+// console.log("Suma de números pares: " + sumaPares);
+// console.log("Suma de números impares: " + sumaImpares);
 
 
 
 //  11. Dado un array de 10 numeros, realizar un programa que imprima por pantalla el
 //  numero mas grande.
+
+// let numeros = [23, 45, 67, 12, 89, 34, 90, 21, 56, 78];
+// let numeroMayor = numeros[0];
+
+// for (let i = 1; i < numeros.length; i++) {
+//     if (numeros[i] > numeroMayor) {
+//         numeroMayor = numeros[i];
+//     }
+// }
+
+// console.log("El número más grande es: " + numeroMayor);
+
+
+
+
+
 //  12. Dado un array de 10 numeros, realizar un programa que imprima por pantalla el
 //  numero mas chico.
+
+// let numeros = [23, 45, 67, 12, 89, 34, 90, 21, 56, 78];
+// let numeroMenor = numeros[0];
+
+// for (let i = 1; i < numeros.length; i++) {
+//     if (numeros[i] < numeroMenor) {
+//         numeroMenor = numeros[i];
+//     }
+// }
+
+// console.log("El número más pequeño es: " + numeroMenor);
+
+
+
+
+
+
+
 //  13. Realizar un programa que permita jugar a piedra papel o tijeras, se debera poder
 //  ingresar los nombres de 2 jugadores. En el bucle del juego se debera pedir 1 a 1 las
 //  manos de cada jugador, y en cada turno se debera seguir jugando solo si se produjo
 //  un empate. Caso contrario mostrar un mensaje con el nombre de la persona
 //  ganadora.
+
+
+// let jugador1 = prompt("Ingresa el nombre del Jugador 1: ");
+// let jugador2 = prompt("Ingresa el nombre del Jugador 2: ");
+
+// let opciones = ["piedra", "papel", "tijeras"];
+// let empate = true;
+
+// while (empate) {
+//     let mano1 = prompt(jugador1 + " elige piedra, papel o tijeras: ").toLowerCase();
+//     let mano2 = prompt(jugador2 + " elige piedra, papel o tijeras: ").toLowerCase();
+
+//     if (!opciones.includes(mano1) || !opciones.includes(mano2)) {
+//         alert("Entrada inválida. Por favor, elige entre piedra, papel o tijeras.");
+//         continue;
+//     }
+
+//     if (mano1 === mano2) {
+//         alert("Empate. Jueguen otra vez.");
+//     } else {
+//         empate = false;
+//         if (
+//             (mano1 === "piedra" && mano2 === "tijeras") ||
+//             (mano1 === "papel" && mano2 === "piedra") ||
+//             (mano1 === "tijeras" && mano2 === "papel")
+//         ) {
+//             alert(jugador1 + " gana con " + mano1 + " contra " + mano2 + "!");
+//         } else {
+//             alert(jugador2 + " gana con " + mano2 + " contra " + mano1 + "!");
+//         }
+//     }
+// }
+
+
+
+
+
+
 //  14. Realizar un programa que imprima por consola un triangulo de 5 asteriscos de lado.
+
+// let n = 5;
+
+// for (let i = 1; i <= n; i++) {
+//     console.log('*'.repeat(i));
+// }
+
+
+
+
+
+
 //  15. Realizar un programa que imprima por consola un triangulo de 5 asteriscos de lado
 //  pero invertido.
+
+// let n = 5;
+
+// for (let i = n; i > 0; i--) {
+//     console.log('*'.repeat(i));
+// }
+
+
+
+
+
+
 //  16. Dado un array de 10 numeros desordenados, realizar un programa que imprima por
 //  pantalla el array ordenado. (NO USAR SORT, solo ciclos FOR)
+
+let numeros = [34, 7, 23, 32, 5, 62, 32, 45, 21, 10];
+
+for (let i = 0; i < numeros.length; i++) {
+    for (let j = 0; j < numeros.length - 1; j++) {
+        if (numeros[j] > numeros[j + 1]) {
+            // Intercambiar los elementos
+            let temp = numeros[j];
+            numeros[j] = numeros[j + 1];
+            numeros[j + 1] = temp;
+        }
+    }
+}
+
+console.log("Array ordenado: " + numeros);
